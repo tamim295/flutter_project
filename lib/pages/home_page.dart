@@ -7,15 +7,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext Context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
-        title: Text('My App'),
+        backgroundColor: Colors.green,
+        // backgroundColor: Colors.teal,
+        title: const Text('My App'),
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome to 30 days of flutter"),
+          child: const Text("Welcome to 30 days of flutter"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
