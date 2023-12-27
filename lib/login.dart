@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -11,10 +13,10 @@ class LoginPage extends StatelessWidget {
               "assets/login_image.png",
               fit: BoxFit.fitWidth,
             ),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 10,
             ),
-            Text(
+            const Text(
               "Welcome",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
@@ -24,23 +26,23 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your username", labelText: "USERNAME"),
                   ),
                   TextFormField(
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Enter your password", labelText: "PASSWORD"),
                   ),
-                  SizedBox(
-                    height: 20,
+                  const SizedBox(
+                    height: 40,
                   ),
                   ElevatedButton(
-                    child: Text("LOGIN"),
                     style: TextButton.styleFrom(),
                     onPressed: () {
-                      print("Hi BOT!");
+                      Navigator.pushNamed(context, '/cal');
                     },
+                    child: const Text("LOGIN"),
                   )
                 ],
               ),
